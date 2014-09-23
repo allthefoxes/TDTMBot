@@ -528,19 +528,6 @@ class DeltaBot(object):
     def update_top_ten_css(self):
         pass
 
-        ### Remove special css classes from last month
-        pass
-
-        ### Remove special css classes from this month
-        ### so that changes are reflected on every update
-        pass
-
-        ### Set special css class for top user
-        pass
-
-        ### Set special css class for top 2-10 users
-       pass
-
     def update_scoreboard(self):
         """ Update the top 10 list with highest scores. """
         logging.info("Updating scoreboard")
