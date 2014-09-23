@@ -174,7 +174,7 @@ class DeltaBot(object):
         first_time_message = self.config.private_message % (
             self.config.subreddit, recipient_name)
         self.reddit.send_message(recipient_name,
-                                 "Congratulations on your first delta!",
+                                 "Congratulations on your first Request Point!",
                                  first_time_message)
 
     def get_message(self, message_key):
@@ -335,7 +335,7 @@ class DeltaBot(object):
             comment_author = str(comment.author.name).lower()
             me = self.config.account['username'].lower()
             if parent_author == me:
-                log = "No points awarded, replying to DeltaBot"
+                log = "No points awarded, replying to TDTMBot"
 
             elif parent_author == comment_author:
                 log = "No points awarded, user replied to self"
@@ -360,7 +360,7 @@ class DeltaBot(object):
                 message = self.get_message('confirmation') % (parent.author,
                                                               self.config.subreddit, parent.author)
         else:
-            log = "No points awarded, comment does not contain Delta"
+            log = "No points awarded, comment does not contain token"
 
         return log, message, awardee
 
@@ -529,42 +529,7 @@ class DeltaBot(object):
         pass
 
     def update_scoreboard(self):
-        """ Update the top 10 list with highest scores. """
-        logging.info("Updating scoreboard")
-        self.update_top_ten_css()
-        now = datetime.datetime.utcnow()
-        top_scores = self.get_top_ten_scores_for_date(now)
-        score_table = [
-            "\n\n# Top Ten Viewchangers (%s)" % calendar.month_name[now.month],
-            self.config.scoreboard['table_head'],
-            self.config.scoreboard['table_leader_entry'] % (
-                top_scores[0]['user'], top_scores[0]['flair_text'],
-                self.config.subreddit, top_scores[0]['user']
-            )
-        ]
-
-        for i in range(1, 10):
-            flair_texts = self.subreddit.get_flair(top_scores[i]['user'])
-            total_deltas = int(flair_texts["flair_text"][:-1])
-            table_entry = self.config.scoreboard['table_entry'] % (
-                i + 1, top_scores[i]['user'], top_scores[i]['flair_text'],
-                total_RPs,self.config.subreddit, top_scores[i]['user']
-            )
-            score_table.append(table_entry)
-
-        settings = self.subreddit.get_settings()
-        old_desc = settings['description']
-        # IMPORTANT: this splits the description on the _____ token.
-        # Don't use said token for anything other than dividing sections
-        # or else this breaks.
-        split_desc = old_desc.split("_____")
-        split_desc[len(split_desc) - 1] = "".join(score_table)
-        new_desc = ""
-        for section in split_desc:
-            if section != split_desc[0]:
-                new_desc = new_desc + "_____" + section.replace("&amp;", "&")
-        self.subreddit.update_settings(description=new_desc)
-        self.changes_made = False
+		pass
 
     def get_top_ten_scores(self):
         """ Get a list of the top 10 scores. """
