@@ -666,7 +666,10 @@ class DeltaBot(object):
                 flair_count = "1 delta"
             else:
                 flair_count += " deltas"
-        awarder_name = comment.author.name
+        if comment.author:
+    		awarder_name = comment.author.name
+	else:
+    		return # Skips, in case the parent comment is deleted.
         today = datetime.date.today()
 
         # try to get wiki page for user, throws exception if page doesn't exist
