@@ -526,56 +526,20 @@ class DeltaBot(object):
         pass
 
     def update_top_ten_css(self):
-        """ Update the flair css for the top ten users """
-        today = datetime.datetime.utcnow()
-        top_1_css = self.config.flair['top1']
-        top_10_css = self.config.flair['top10']
-        top_scores = self.get_top_ten_scores_for_date(today)
+        pass
 
         ### Remove special css classes from last month
-        last_month = datetime.datetime(day=1,month=today.month,year=today.year) - datetime.timedelta(days=1)
-        last_month_scores = self.get_top_ten_scores_for_date(last_month)
-        for score in last_month_scores:
-            redditor = score['user']
-            flair = self.subreddit.get_flair(redditor)
-            flair_text = flair['flair_text']
-            current_css = flair['flair_css_class']
-            print(redditor)
-            print(flair)
-            print(flair_text)
-            print(current_css)
-            stuff = raw_input("Wait")
-            new_css = current_css.replace(top_1_css, '').replace(top_10_css, '').strip()
-            self.subreddit.set_flair(redditor,flair_text=flair_text,flair_css_class=new_css)
+        pass
 
         ### Remove special css classes from this month
         ### so that changes are reflected on every update
-        for score in top_scores:
-            redditor = score['user']
-            flair = self.subreddit.get_flair(redditor)
-            flair_text = flair['flair_text'] 
-            current_css = flair['flair_css_class']
-            new_css = current_css.replace(top_1_css, '').replace(top_10_css, '').strip()
-            self.subreddit.set_flair(redditor,flair_text=flair_text,flair_css_class=new_css)
+        pass
 
         ### Set special css class for top user
-        top_redditor = top_scores[0]['user']
-        flair = self.subreddit.get_flair(redditor)
-        flair_text = flair['flair_text'] 
-        top_1_current = flair['flair_css_class']
-        if top_1_css not in top_1_current:
-            new_css = '{0} {1}'.format(top_1_current, top_1_css)
-            self.subreddit.set_flair(top_redditor,flair_text=flair_text,flair_css_class=new_css)
+        pass
 
         ### Set special css class for top 2-10 users
-        for i in range(1, 10):
-            redditor = top_scores[i]['user']
-            flair = self.subreddit.get_flair(redditor)
-            flair_text = flair['flair_text'] 
-            current_css = flair['flair_css_class']
-            if top_10_css not in current_css:
-                new_css = '{0} {1}'.format(current_css,top_10_css)
-                self.subreddit.set_flair(redditor,flair_text=flair_text,flair_css_class=new_css)
+       pass
 
     def update_scoreboard(self):
         """ Update the top 10 list with highest scores. """
@@ -597,7 +561,7 @@ class DeltaBot(object):
             total_deltas = int(flair_texts["flair_text"][:-1])
             table_entry = self.config.scoreboard['table_entry'] % (
                 i + 1, top_scores[i]['user'], top_scores[i]['flair_text'],
-                total_deltas,self.config.subreddit, top_scores[i]['user']
+                total_RPs,self.config.subreddit, top_scores[i]['user']
             )
             score_table.append(table_entry)
 
@@ -820,8 +784,8 @@ class DeltaBot(object):
                                                        self.scanned_comments else "None"))
             reset_counter += + 1
             print("Reset Counter at %s." % reset_counter)
-            print("When this reaches 10, the script will clear its history.")
-            if reset_counter == 10:
+            print("When this reaches 10,000, the script will clear its history.")
+            if reset_counter == 10000:
                 self.scanned_comments.clear()
                 reset_counter = 0
             logging.info("Sleeping for %s seconds" % self.config.sleep_time)
