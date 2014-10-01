@@ -1,4 +1,4 @@
-DeltaBot Requirements Document
+TDTMBot Requirements Document
 
 This is a list of DeltaBot's features. If you are confused about why a particular function or piece of code is necessary, check here to get an idea as to which feature implements. You should also check that new code works with DeltaBot's constraints.
 
@@ -9,11 +9,11 @@ Constraints:
 
 Features:
 1 - DeltaBot should periodically scan any new comments that have been made in its subreddit.
-2 - If a comment contains a Delta Symbol, DeltaBot should award 1 point to the author of the comment's parent, unless:
+2 - If a comment contains a "Token", DeltaBot should award 1 point to the author of the comment's parent, unless:
 2.1 - The parent is OP, DeltaBot or the awarder. WARNING: DeltaBot does not currently deal with self-awarding
 2.2 - The commenter has already awarded a delta to this comment. WARNING: If DeltaBot finds replies it made that are not awarding it will delete them.
 2.3 - The commenter has already awarded a delta to the parent's author at a higher point in the thread (but elsewhere in the comment tree or elsewhere in the submission's comment page are cool)
-2.4 - The comment is shorter than [length]
+2.4 - The comment is shorter than [length] *WARNING:* TDTMBot has this disabled.
 3 - Awarding a delta to a user consists of:
 3.1 - Adding 1 to the number in the user's flair or giving them a flair of "1" if they have no flair
 3.2 - Checking if they have one of the top 10 scores this month. If so, update the high score chart in the sidebar to show this.
