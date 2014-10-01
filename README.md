@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # TDTMBot
 
 TDTMBot is a fork of [DeltaBot](https://github.com/alexames/DeltaBot). 
@@ -21,5 +20,3 @@ This bot works by reading a subreddit and looking for specific tokens that denot
 ## Contribute
 
 If you're a developer visit the developer subreddit [/r/DeltaBot](http://reddit.com/r/DeltaBot)
-
->>>>>>> e37307ec799b0e64194aecd79dc63f971898295e
