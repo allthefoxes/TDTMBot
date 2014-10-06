@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 # DeltaBot
 
 DeltaBot is a score keeping reddit bot originally designed for [/r/changemyview](http://reddit.com/r/changemyview). If you are thinking about using this code for your own subreddit, or any other purpose, we advise that you use a token that makes sense to you. The delta is an appropriate symbol that was chosen for /r/changemyview because it is often used to represent *change*.
 
 This bot works by reading a subreddit and looking for specific tokens that denote that a point should be awarded. If it finds one, it acts accordingly by carrying out various jobs that can be found at http://www.reddit.com/r/changemyview/wiki/deltabot. 
+=======
+# TDTMBot
+
+TDTMBot is a fork of [DeltaBot](https://github.com/alexames/DeltaBot). 
+>>>>>>> origin/master
 
 ## Usage
 
@@ -12,6 +18,7 @@ This bot works by reading a subreddit and looking for specific tokens that denot
 
 Make sure whatever account you're using to run the bot is a moderator of your subreddit and has permission to edit flair and the wiki.
 
+<<<<<<< HEAD
 ## Contribute
 
 If you're a developer visit the developer subreddit [/r/DeltaBot](http://reddit.com/r/DeltaBot)
@@ -19,3 +26,15 @@ If you're a developer visit the developer subreddit [/r/DeltaBot](http://reddit.
 Check out requirements_doc.txt to get an idea of what DeltaBot needs to do. To see new features that have not been implemented yet, check the Issues page.
 
 [Join us on IRC!](http://webchat.snoonet.org/DeltaBot) (Snoonet #DeltaBot)
+=======
+# DeltaBot
+
+DeltaBot is a score keeping reddit bot originally designed for [/r/changemyview](http://reddit.com/r/changemyview). If you are thinking about using this code for your own subreddit, or any other purpose, we advise that you use a token that makes sense to you. The delta is an appropriate symbol that was chosen for /r/changemyview because it is often used to represent *change*.
+
+This bot works by reading a subreddit and looking for specific tokens that denote that a point should be awarded. If it finds one, it acts accordingly by carrying out various jobs that can be found at http://www.reddit.com/r/changemyview/wiki/deltabot. 
+
+
+## Contribute
+
+If you're a developer visit the developer subreddit [/r/DeltaBot](http://reddit.com/r/DeltaBot)
+>>>>>>> origin/master
