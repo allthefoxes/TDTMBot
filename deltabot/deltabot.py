@@ -22,12 +22,12 @@
 # along with Deltabot.  If not, see <http://www.gnu.org/licenses/>.            #
 #                                                                              #
 =======
-# # This Modication made by Allthefoxes -- 2014                                #
+# # This Modification made by Allthefoxes -- 2014                                #
 # # Contact http://www.reddit.com/u/allthefoxes                                #
 # # Original Code Copyright by the moderators of:                              #
 # # http://www.reddit.com/r/changemyview                                       #
 # # This branch of the original Deltabot is known as TDTMBot                   #
-# # and is licesnsed inder the GNU General Public License                      #
+# # and is licensed under the GNU General Public License                      #
 #                                                                              #
 
 ################################################################################
