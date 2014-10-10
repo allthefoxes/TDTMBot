@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # DeltaBot
 
 DeltaBot is a score keeping reddit bot originally designed for [/r/changemyview](http://reddit.com/r/changemyview). If you are thinking about using this code for your own subreddit, or any other purpose, we advise that you use a token that makes sense to you. The delta is an appropriate symbol that was chosen for /r/changemyview because it is often used to represent *change*.
@@ -8,7 +8,6 @@ This bot works by reading a subreddit and looking for specific tokens that denot
 # TDTMBot
 
 TDTMBot is a fork of [DeltaBot](https://github.com/alexames/DeltaBot). 
->>>>>>> origin/master
 
 ## Usage
 
