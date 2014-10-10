@@ -21,7 +21,6 @@
 # You should have received a copy of the GNU General Public License            #
 # along with Deltabot.  If not, see <http://www.gnu.org/licenses/>.            #
 #                                                                              #
-<<<<<<< HEAD
 =======
 # # This Modication made by Allthefoxes -- 2014                                #
 # # Contact http://www.reddit.com/u/allthefoxes                                #
@@ -30,7 +29,7 @@
 # # This branch of the original Deltabot is known as TDTMBot                   #
 # # and is licesnsed inder the GNU General Public License                      #
 #                                                                              #
->>>>>>> origin/master
+
 ################################################################################
 """
 from __future__ import print_function
@@ -361,11 +360,7 @@ class DeltaBot(object):
                 log = "No points awarded, already awarded"
                 message = self.get_message('already_awarded') % parent.author
 
-<<<<<<< HEAD
-            elif strict and self.is_comment_too_short(comment):
-=======
             elif False and self.is_comment_too_short(comment):
->>>>>>> origin/master
                 log = "No points awarded, too short"
                 message = self.get_message('too_little_text') % parent.author
 
