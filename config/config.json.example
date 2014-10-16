@@ -31,6 +31,9 @@
         "broken_rule": [
             "You cannot award OP a delta as the moderators feel that allowing so would send the wrong message. If you were trying show the OP how to award a delta, please do so without using the delta symbol unless it's included in a reddit quote."
         ]
+         "not_op": [
+            "You cannot award a request point because you are not the original submitter of this thread"
+        ]
     },
 
     "tokens": ["∆", "&amp;#8710;", "Δ"],
