@@ -444,12 +444,6 @@ class DeltaBot(object):
                                                       message.author))
         if self.is_moderator(message.author.name):
             command = message.subject.lower()
-            if command == "force add":
-                self.reddit.send_message("/r/" + self.config.subreddit,
-                                         "Force Add Detected",
-                                         "The Force Add command has been used "
-                                         "on the following link(s):\n\n" + \
-                                         message.body)
             if command == "add" or command == "force add":
                 strict = (command != "force add")
                 self.command_add(message.body, strict)
