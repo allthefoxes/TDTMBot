@@ -350,7 +350,7 @@ class DeltaBot(object):
             elif parent_author == comment_author:
                 log = "No points awarded, user replied to self"
 				
-            elif post_author != comment_author or not is_moderator(comment_author):
+            elif post_author != comment_author and not is_moderator(comment_author):
 				log = "No points awarded, not OP"
 				message = self.get_message('not_op')
 
