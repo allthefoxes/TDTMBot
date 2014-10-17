@@ -288,6 +288,12 @@ class DeltaBot(object):
                     reply.delete()
                     return False
         return False
+		
+	def is_moderator(self, name):
+        moderators = self.reddit.get_moderators(self.config.subreddit)
+        mod_names = [mod.name for mod in moderators]
+        return name in mod_names
+
 
     def is_parent_commenter_author(self, comment, parent):
         """ Returns true if the author of the parent comment the submitter """
@@ -433,11 +439,6 @@ class DeltaBot(object):
             comment = self.reddit.get_info(thing_id='t1_%s' % id)
             if type(comment) is praw.objects.Comment:
                 self.scan_comment_wrapper(comment, strict=strict)
-
-    def is_moderator(self, name):
-        moderators = self.reddit.get_moderators(self.config.subreddit)
-        mod_names = [mod.name for mod in moderators]
-        return name in mod_names
 
     def scan_message(self, message):
         logging.info("Scanning message %s from %s" % (message.name,
