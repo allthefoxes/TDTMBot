@@ -436,7 +436,7 @@ class DeltaBot(object):
 
     def is_moderator(self, name):
         moderators = self.reddit.get_moderators(self.config.subreddit)
-        mod_names = [mod.name for mod in moderators]
+        mod_names = [mod.name.lower() for mod in moderators]
         return name in mod_names
 
     def scan_message(self, message):
