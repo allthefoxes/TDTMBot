@@ -669,7 +669,7 @@ class DeltaBot(object):
         except:
 
             # create header for new wiki page
-            initial_text = "/u/%s has received 1 request point for the following comments:" % parent_author
+            initial_text = "/u/%s has received a request point for the following comments:" % parent_author
 
             # create link and format as markdown list item
             # "?context=2" means link shows comment earning the delta and the comment awarding it
