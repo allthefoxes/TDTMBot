@@ -234,7 +234,7 @@ class DeltaBot(object):
             entry = scoreboard[redditor] = {"links": [], "score": 0}
 
         entry["links"].append("[%s](%s)" % (comment.submission.title,
-                                            comment.permalink))
+                                            comment.permalink + "?context=3"))
         entry["score"] += num_points
 
         self.reddit.edit_wiki_page(self.config.subreddit, page_title,
@@ -634,7 +634,7 @@ class DeltaBot(object):
 
                 # insert link to new delta
                 new_link += "\n    1. [Awarded by /u/%s](%s) on %s/%s/%s" % (
-                    awarder_name, comment_url + "?context=2",
+                    awarder_name, comment_url + "?context=3",
                     today.month, today.day, today.year
                 )
 
