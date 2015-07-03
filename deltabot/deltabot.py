@@ -339,7 +339,7 @@ class DeltaBot(object):
         message = None
         awardee = None
 
-        if str_contains_token(comment.body, self.config.tokens) or not strict:
+        if (str_contains_token(comment.body, self.config.tokens) and comment.author.name != "checks_for_checks") or not strict:
             parent_author = str(parent.author.name).lower()
             comment_author = str(comment.author.name).lower()
             post_author = str(comment.submission.author).lower()
