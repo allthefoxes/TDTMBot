@@ -349,14 +349,14 @@ class DeltaBot(object):
 
             elif parent_author == comment_author:
                 log = "No points awarded, user replied to self"
+	
+	    elif check_already_replied(comment):
+                log = "No points awarded, already replied"
 				
             elif post_author != comment_author and not self.is_moderator(comment_author):
 				log = "No points awarded, not OP"
 				message = self.get_message('not_op')
-
-            elif check_already_replied(comment):
-                log = "No points awarded, already replied"
-
+            
             elif strict and check_is_parent_commenter_author(comment, parent):
                 log = "No points awarded, parent is OP"
                 message = self.get_message('broken_rule')
